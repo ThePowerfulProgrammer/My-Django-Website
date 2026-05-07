@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %} Track Workout {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/detail.css' %}"> {% endblock %}
+
+{% block body %}
+
+    {% if set %}
+
+        <div class="workout-container mt-3 bg-dark text-white p-3 rounded">
+            <h1 class="display-3 fira-sans-light" >{{ workout }}</h1>                    
+            <form action="{% url 'Potential_Unleashed:trackWorkout' workoutId=workout_id setId=set_id %}" method="post">
+                {% csrf_token %}
+                <h2 class="form-label fira-sans-light">{{ set }}</h2>
+                {{ setForm.as_p }}
+                <input type="submit" placeholder="Submit" class="btn btn-primary border">
+            </form>
+
+
+
+        </div>
+        
+    {% else %}
+        <p>No exercises associtated with workout</p>
+    {% endif %}
+
+
+
+
+{% endblock %}

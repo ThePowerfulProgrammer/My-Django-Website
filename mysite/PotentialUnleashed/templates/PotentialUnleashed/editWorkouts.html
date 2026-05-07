@@ -1,0 +1,42 @@
+{% extends 'PotentialUnleashed/base.html' %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/editWorkouts.css' %}"> {% endblock %}
+
+{% block body %}
+
+    {% if addExerciseForm %}
+
+        <div class="container  bg-dark p-3 rounded">
+            <h3 class="display-3 fira-sans-bold text-white text-decoration-underline">Add Exercise</h3>
+            <form action="{% url 'Potential_Unleashed:editWorkout'  workout_id=workout_id mesocycle_id=mesocycle_id %}" method="post">
+                <div class="form-group">
+                    {% csrf_token %}
+                    <!-- {{ form.as_p }} -->
+                    {{ addExerciseForm.as_p }}            
+                </div>
+                
+                <button type="submit" class="btn btn-primary bnt-md fira-sans-light mb-3"> Submit</button>
+            </form>            
+        </div>
+
+        <div class="container bg-dark p-3 rounded">
+            <h3 class="display-3 fira-sans-bold text-white text-decoration-underline">Edit Workout Name</h3>
+            <form action="{% url 'Potential_Unleashed:editWorkoutName'  workout_id=workout_id mesocycle_id=mesocycle_id %}" method="post">
+                <div class="form-group">
+                    {% csrf_token %}
+                    {{ changeworkoutnameForm.as_p }}            
+                </div>
+                
+                <button type="submit" class="btn btn-primary bnt-md fira-sans-light mb-3"> Submit</button>
+            </form>         
+        </div>
+
+        
+        
+        
+    {% else %}
+
+    {% endif %}
+
+{% endblock %}

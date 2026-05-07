@@ -1,0 +1,23 @@
+.list-group 
+{
+    background-color: black;
+}
+
+
+
+.list-group-item,
+.list-group-item a 
+{
+    background-color: black;    
+    color: white;
+}
+
+.list-group-item a:hover
+{
+    color: #2CDA9D;
+}
+
+.list-group-workoutHistory a
+{
+    color: #950101;
+}

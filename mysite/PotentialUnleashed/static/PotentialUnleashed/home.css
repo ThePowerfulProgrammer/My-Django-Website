@@ -1,0 +1,59 @@
+.navbar 
+{
+    background: #000000;
+    border-bottom: 2px solid #950101;
+    padding: 12px;
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar-brand 
+{
+    color: #FFFFFF;
+}
+
+#navbar-toggler:hover
+{
+    color: #FFFFFF;
+}
+
+.navbar-nav,
+.nav-item,
+.nav-link,
+.active {
+    color: #FFFFFF;
+}
+
+.navbar-brand:hover,
+.navbar-nav:hover,
+.nav-item:hover,
+.nav-link:hover,
+.active:hover {
+    color: #950101;
+}
+
+.jumbotron 
+{
+    transition: box-shadow 0.5s ease;
+}
+
+.jumbotron:hover 
+{
+    box-shadow: -1px 1px 33px 0px #ffffff;
+    -webkit-box-shadow: -1px 1px 33px 0px #ffffff;
+    -moz-box-shadow: -1px 1px 33px 0px #ffffff;
+}
+
+.btn-primary 
+{
+    background-color: black;
+}
+
+.btn-primary:hover
+{
+    background-color: #950101;
+    border-color: #950101;
+}

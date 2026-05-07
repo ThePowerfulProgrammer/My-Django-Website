@@ -1,0 +1,62 @@
+{% extends 'PotentialUnleashed/base.html' %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/workouthistory.css' %}"> {% endblock %}
+
+
+
+{% block body %}
+
+    {% if sets_workout_info %}
+
+        <div class="container my-5">
+
+                    
+            {% for sets,name in sets_workout_info %}
+                
+                    
+                    <h1 class="title fira-sans-black">{{ name }}</h1>
+
+                        <!-- Create a Table -->
+                        <table class="table table-bordered table-dark table-hover mb-1">
+                                            
+                            <thead class="fira-sans-black">
+                                <tr class="table-heading text-lg-center">
+                                    {% for field in exercise_fields %}
+
+                                        <th class="col" scope="col" >{{ field }}</th>
+
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+
+                            <tbody class="fira-sans-medium-italic table-entries">
+
+                                {% for set in sets %}
+
+                                <tr class="text-lg-center">
+                                    <th scope="row"> {{ set.workout_exercise.order }}</th>
+                                    <td>{{ set.getExercise }}</td>
+                                    <td>{{ set.getRepTarget }}</td>
+                                    <td>{{ set.getWeightTarget }}</td>        
+                                    <td>{{ set }}</td>
+                                    <td>{{ set.getRepsHit }}</td>  
+                                    <td>{{ set.getWeightHit }}</td> 
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+
+                        </table>
+
+
+
+            {% endfor %}
+
+        </div>
+    {% else %}
+        <p class="lead">No workout history available</p>
+
+    {% endif %}
+
+{% endblock %}

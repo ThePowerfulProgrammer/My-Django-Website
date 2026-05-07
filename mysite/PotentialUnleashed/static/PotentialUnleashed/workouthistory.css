@@ -1,0 +1,76 @@
+.container 
+{
+    padding: 0px;
+}
+
+.title 
+{
+    color:white;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 0px;
+    font-size: 3rem;
+    padding-left: 2px;
+}
+
+
+.table-heading 
+{
+    font-size: 1.25rem;
+}
+
+.table-entries 
+{
+    font-size: 1rem;
+}
+
+
+@media (max-width: 630px) {
+
+    .table-heading 
+    {
+        font-size: 1rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.95rem;
+    }
+
+    .title 
+    {
+        background-color: transparent;
+        color: black;
+    }        
+
+    .workout-container 
+    {
+        width: 100%;
+    }    
+
+    .title 
+    {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media (max-width: 350px) {
+
+    .table-heading 
+    {
+        font-size: 0.5rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.45rem;
+    }
+
+    .title 
+    {
+        font-size: 1.5rem;
+    }
+
+}

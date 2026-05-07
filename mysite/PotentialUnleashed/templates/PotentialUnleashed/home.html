@@ -1,0 +1,50 @@
+{% extends 'PotentialUnleashed/base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/home.css' %}"> {% endblock %}
+
+{% block body %}
+
+    {% if request.user.is_superuser  %}
+        <!-- GUI FOR SUPERUSER -->
+
+    <!-- Jumbotron  -->
+     <div class="container bg-light rounded py-4 my-5 jumbotron">
+
+        <div class="container-fluid py-5 border-rounded ">
+
+            <h1 class="display-5 boldonse-regular fs-1 fw-bold">धैर्य</h1>
+            <p class="fira-sans-regular-italic fs-2"> <span class="fw-bold">Dhairya</span> emphasizes the value of courage in overcoming obstacles, prevalent in epic tales.
+             Ashish, in the pursuit of perfection do not forget to begin.
+             Maintain this website as a keepsake, years of effort finally erupting into a engineered project I can be proud of</p>
+
+            <button class="btn btn-primary btn-lg fira-sans-regular-italic">Projects</button>
+            
+        </div>
+
+     </div>
+
+    {% else %}
+        <!-- GUI FOR REGULAR USER         -->
+
+    <!-- Jumbotron  -->
+     <div class="container bg-light rounded py-4 my-5 jumbotron">
+
+        <div class="container-fluid py-5 border-rounded ">
+
+            <h1 class="display-5 boldonse-regular fs-1 fw-bold">धैर्य</h1>
+            <p class="fira-sans-regular-italic fs-2"> <span class="fw-bold">Dhairya</span> emphasizes the value of courage in overcoming obstacles, prevalent in epic tales.
+            In the pursuit of perfection, do not forget to start.
+            </p>
+
+            
+            
+        </div>
+
+     </div>
+
+    {% endif %}
+
+{% endblock %}

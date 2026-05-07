@@ -1,0 +1,43 @@
+{% extends "PotentialUnleashed/base.html "%}
+{% load static %}
+
+{% block title %} {{ mesocycle }} - workouts {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/mesocyclesWorkouts.css' %}"> {% endblock %}
+
+
+{% block body %}
+
+    
+    {% if mesocycleWorkouts %}
+
+        <div class="container my-5">
+            <ol class="list-group">
+                {% for workout in mesocycleWorkouts%}
+
+                        <li class="list-group-item fira-sans-regular"> 
+                            
+                            <a href="{% url 'Potential_Unleashed:detail' mesocycle_id=mesocycle_id workout_id=workout.id %}">{{ workout }}</a>
+                        </li>
+
+                {% endfor %}
+
+                {% if request.user.is_superuser %}
+                    <li class="list-group-item list-group-workoutHistory">
+                        <a href="{% url 'Potential_Unleashed:mesocycleHistory' mesocycle_id=mesocycle_id %}">Workout History</a>
+                    </li>
+                {% endif%}
+                
+            </ol>
+
+            
+        </div>
+
+
+    {% else %}
+        <p class="text-center">NO workouts available, you should not be able to see this error page</p>
+
+    {% endif %}
+        
+
+{% endblock %}

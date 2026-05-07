@@ -1,0 +1,33 @@
+{% extends 'PotentialUnleashed/base.html' %}
+{% load static %}
+{% block title %} Mesocycles {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/mesocycles.css' %}"> {% endblock %}
+
+
+{% block body %}
+
+<div class="container my-5">
+
+    <h1 class="banner text-center text-white boldonse-regular mb-3">Mesocycles</h1>
+    
+    {% if mesocycles %}
+
+        <ol class="list-group">
+            {% for mesocycle in mesocycles %}
+
+                <li class="list-group-item fira-sans-regular "> 
+                    <a href="{% url 'Potential_Unleashed:workoutsPerMesocycle' mesocycle_id=mesocycle.id %}">{{ mesocycle }}</a>
+                </li>                            
+            {% endfor %}
+
+        </ol>
+    
+    {% else %}
+        <h1 class="text-center fs-1">Please return to the homepage</h1>
+        <a href="#" class="btn btn-lg btn-primary text-center">Home</a>
+    {% endif %}
+
+</div>
+
+{% endblock %}

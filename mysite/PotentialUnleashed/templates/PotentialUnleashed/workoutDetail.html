@@ -1,0 +1,91 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %} Workout Details {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'PotentialUnleashed/detail.css' %}"> {% endblock %}
+
+{% block body %}
+
+    {% if sets %}
+
+        <div class="workout-container mt-3">
+
+            <!-- Workout Title -->
+            <h1 class="title fira-sans-black m-0">{{ workout.name }} - {{ workout.date }} - {{ workout.id }}</h1>
+            
+            <!-- Workout Information -->
+            <table class="table table-bordered table-dark table-hover mb-1">
+                                
+                <thead class="fira-sans-black">
+                    <tr class="table-heading">
+                        {% for field in exercise_fields %}
+                            
+                            <th class="col" scope="col" >{{ field }}</th>
+
+                        {% endfor %}
+                    </tr>
+                </thead>
+
+                <tbody class="fira-sans-medium-italic table-entries">
+
+                    {% for set in sets %}
+
+                    <tr class="text-lg-center">
+                        <th scope="row"> {{ set.workout_exercise.order }}</th>
+                        <td>{{ set.getExercise }}</td>
+                        <td>{{ set.getRepTarget }}</td>
+                        <td>{{ set.getWeightTarget }}</td>        
+                        <td>{{ set }}</td>
+                        <td>{{ set.getRepsHit }}</td>  
+                        <td>{{ set.getWeightHit }}</td>
+                        {% if request.user.is_superuser %}
+                            
+                            <td> 
+                                <a href="{% url 'Potential_Unleashed:trackWorkout' workoutId=workout_id setId=set.id %}" class="btn-sm btn btn-light update-Btn">Update</a>
+                            </td>
+                        {% endif %}             
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Copy Workout -->
+
+        {% if request.user.is_superuser %}
+            <h1 class="copy-workout fira-sans-black mt-0 text-center">
+                
+            <a href="{% url 'Potential_Unleashed:copyWorkout' workout_id=workout.id %}" class="copy-workout-link">Copy Workout</a>    
+            </h1>        
+
+            <h1 class="copy-workout fira-sans-black mt-2 text-center">
+                <a href="{% url 'Potential_Unleashed:editWorkout' mesocycle_id=mesocycle_id workout_id=workout_id%}" class="copy-workout-link">Edit Workout</a>                    
+            </h1>
+
+            <h1 class="copy-workout fira-sans-black mt-2 text-center">
+                <a href="{% url 'Potential_Unleashed:trackFullWorkout' workoutId=workout_id%}" class="copy-workout-link">Track Workout</a>                    
+            </h1>        
+        {% endif %}
+
+        
+        <div class="workoutHistory workout-container mb-4">
+            <ol class="list-group mt-5 mb-5">
+
+                {% for workout in allWorkouts %}
+                    <li class="list-group-item fira-sans-regular">
+                        <a href="{% url 'Potential_Unleashed:detail' mesocycle_id=mesocycle_id workout_id=workout.id %}"> {{ workout }}</a>
+                    </li>
+                {% endfor %}
+
+            </ol>
+        </div>
+
+    {% else %}
+        <p>No exercises associtated with workout</p>
+    {% endif %}
+
+{% endblock %}

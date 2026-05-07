@@ -1,0 +1,164 @@
+.workout-container 
+{
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+
+.table 
+{   
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;    
+  text-align: center;
+}
+
+.title 
+{
+    background-color: black;
+    padding: 12px;
+    color:white;
+}
+
+.table 
+{
+    padding: 5px;
+}
+
+.table-heading 
+{
+    font-size: 1.25rem;
+}
+
+.table-entries 
+{
+    font-size: 1rem;
+}
+
+.submit-button 
+{
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 2rem;
+    color:white;
+    background-color: #22007c;
+}
+
+.submit-button:hover 
+{
+    background-color: #0d00a4;
+}
+
+
+.copy-workout 
+{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 1s ease;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.copy-workout:hover 
+{
+    background-color: #0d00a4;
+}
+
+.copy-workout a 
+{
+    color:white;
+    transition: color 1s ease;
+
+}
+
+.copy-workout a:hover 
+{
+    color:#2CDA9D;
+}
+
+.list-group-item
+{
+    background-color: black;
+}
+
+.list-group-item a
+{
+    color: white;
+}
+
+.list-group-item a:hover
+{
+    color: #2CDA9D;
+}
+
+@media (max-width: 630px) {
+
+    .table-heading 
+    {
+        font-size: 0.85rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.65rem;
+    }
+
+    .update-Btn 
+    {
+        font-size: 0.65rem;
+    }
+
+    .title 
+    {
+        background-color: transparent;
+        color: black;
+    }        
+
+    .workout-container 
+    {
+        width: 100%;
+    }    
+
+    .copy-workout 
+    {
+        width: 100%;
+        border-radius: 0px;
+        padding: 5px;
+    }    
+
+}
+
+
+@media (max-width: 470px) {
+
+    .table-heading 
+    {
+        font-size: 0.75rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.5rem;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .table-heading 
+    {
+        font-size: 0.5rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.45rem;
+    }
+
+
+
+}
