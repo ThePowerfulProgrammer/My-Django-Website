@@ -16,9 +16,17 @@
         <ol class="list-group">
             {% for mesocycle in mesocycles %}
 
-                <li class="list-group-item fira-sans-regular "> 
-                    <a href="{% url 'Potential_Unleashed:workoutsPerMesocycle' mesocycle_id=mesocycle.id %}">{{ mesocycle }}</a>
-                </li>                            
+                {% if mesocycle == current_mesocycle %}
+                    <li class="list-group-item fira-sans-regular "> 
+                        <a href="{% url 'Potential_Unleashed:workoutsPerMesocycle' mesocycle_id=mesocycle.id %}">{{ mesocycle }} - Current Training Block</a>
+                    </li>   
+                {% else %}
+                    <li class="list-group-item fira-sans-regular "> 
+                        <a href="{% url 'Potential_Unleashed:workoutsPerMesocycle' mesocycle_id=mesocycle.id %}">{{ mesocycle }}</a>
+                    </li>                       
+                {% endif %}
+
+                         
             {% endfor %}
 
         </ol>

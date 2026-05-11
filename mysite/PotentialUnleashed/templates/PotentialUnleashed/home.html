@@ -20,7 +20,18 @@
              Ashish, in the pursuit of perfection do not forget to begin.
              Maintain this website as a keepsake, years of effort finally erupting into a engineered project I can be proud of</p>
 
-            <button class="btn btn-primary btn-lg fira-sans-regular-italic">Projects</button>
+
+            <div class="dropdown fira-sans-light">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Projects
+                </button>                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <a href="{% url 'Potential_Unleashed:mesocycles' %}" class="dropdown-item ">Track Workout</a>
+                    </li>
+                </ul>
+            </div>
+
             
         </div>
 

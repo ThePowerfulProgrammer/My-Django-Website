@@ -39,8 +39,9 @@
 
     .title 
     {
-        background-color: transparent;
+        background-color: white;
         color: black;
+        margin-top: 2rem;
     }        
 
     .workout-container 
@@ -56,6 +57,23 @@
 
 }
 
+
+
+
+@media (max-width: 470px) {
+
+    .table-heading 
+    {
+        font-size: 0.5rem;
+    }
+
+    .table-entries 
+    {
+        font-size: 0.5rem;
+    }
+
+}
+
 @media (max-width: 350px) {
 
     .table-heading 
@@ -68,9 +86,6 @@
         font-size: 0.45rem;
     }
 
-    .title 
-    {
-        font-size: 1.5rem;
-    }
+
 
 }

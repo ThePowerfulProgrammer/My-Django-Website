@@ -145,20 +145,28 @@
         font-size: 0.5rem;
     }
 
+    .update-Btn 
+    {
+        font-size: 0.45rem;
+    }    
+
 }
 
 @media (max-width: 350px) {
 
     .table-heading 
     {
-        font-size: 0.5rem;
+        font-size: 0.45rem;
     }
 
     .table-entries 
     {
-        font-size: 0.45rem;
+        font-size: 0.35rem;
     }
 
-
+    .update-Btn 
+    {
+        font-size: 0.35rem;
+    }        
 
 }

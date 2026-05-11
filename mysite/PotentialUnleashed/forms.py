@@ -27,9 +27,9 @@ class SetModelForm(ModelForm):
     class Meta:
         model = Set 
         fields = ['reps_hit', "weight_hit"]
-        widgets = {
-            "weight_hit": forms.NumberInput(attrs={'step': 0.5})
-        }
+        # widgets = {
+        #     "weight_hit": forms.NumberInput(attrs={'step': 0.25})
+        # }
                 
     def clean_reps_hit(self):
         print(self.instance)

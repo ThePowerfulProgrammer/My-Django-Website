@@ -17,10 +17,13 @@ def home(request):
 # 2 
 def mesocycles(request):
     
-    mesocycles = Mesocycle.objects.all()
+    mesocycles = Mesocycle.objects.all().order_by("-id")
+    current_mesocycle = Mesocycle.objects.last()
+    print("CURRENT MESOCYCLE: ", current_mesocycle)
     print(mesocycles)
     return render(request, "PotentialUnleashed/mesocycles.html", 
-                  context={"mesocycles": mesocycles})
+                  context={"mesocycles": mesocycles, 
+                           "current_mesocycle":current_mesocycle})
     
 # Show all workouts under a mesocycle    
 # 3
@@ -206,7 +209,8 @@ def trackWorkout(request, workoutId, setId):
         print("GET")
         set = Set.objects.get(id=setId)
         
-        setForm = SetModelForm(instance=set)
+        setForm = SetModelForm(instance=set, initial={"reps_hit": set.reps_target, 
+                                                      "weight_hit": set.weight_target})
                 
         return render(request, "PotentialUnleashed/trackWorkout.html", 
                       context={"workout_id": workoutId,
