@@ -1,0 +1,213 @@
+
+/* body 
+{
+    overflow: hidden;
+    margin: 0;
+} */
+
+/* The container for my grid */
+.grid-container 
+{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+ /* My grid */
+.grid 
+{
+    display: grid;
+    border: 0.5px solid white;
+    grid-template-columns: 25% 50% 25% ;
+    height: 800px;
+    /* grid-template-rows: 50% 50%; */
+    gap: 1px;
+
+}
+
+/* Items in my Grid */
+.grid .item 
+{
+    background-color: lightcoral;
+    color: white;
+
+}
+
+
+.text-container 
+{
+    width: 100%;
+    height:auto;
+    background-color: black;
+}
+
+.text-box 
+{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.banner span 
+{
+    color: #42E2B8;
+}
+
+.text-box ul 
+{
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.text-box ul  span 
+{
+    color: #42E2B8;
+}
+
+.text-box ul a 
+{
+    color: #42E2B8;
+    text-decoration-line: #42E2B8;
+}
+
+#terminal {
+    margin: 0 auto;
+    width: 85%;
+    border: 0.25px solid white;
+    height: 500px;              /* fixed height, not just max-height */
+    display: flex;
+    flex-direction: column;     /* stack history on top, input below */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#terminalHistory {
+    flex: 1;                    /* takes up all remaining space */
+    overflow-y: auto;           /* scrolls internally once it's full */
+    color: white;
+    background-color: transparent;
+    padding: 0.5rem;
+}
+
+#terminalInput {
+    flex-shrink: 0;             /* never gets squeezed by history growing */
+}
+
+#terminalInput input  
+{
+    border: 0px;
+    width: 100%;
+}
+
+
+#commandPrompt {
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    width: 100%;
+}
+
+
+
+.output 
+{
+    background-color: transparent;
+    border: 0px;
+    color: white;    
+}
+
+.glow-box
+{
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 12px;
+    border: 5px solid white;
+    width: 80%;
+    height: 600px;
+    margin-bottom: 2rem;
+    animation-direction: alternate;
+    animation: backgroundColorShift 5s infinite alternate;
+}
+
+@keyframes backgroundColorShift 
+{
+    0% 
+    {
+        
+        background-color: #175041;
+
+    }
+
+    25% 
+    {
+        background-color: #22755f;
+    }
+
+    50% 
+    {
+        background-color: #2d997d;   
+    }
+
+    75% 
+    {
+        background-color: #37be9a;
+    }
+
+    100% 
+    {
+        background-color: #42E2B8;
+    }
+}
+
+
+.glow-box div 
+{
+    width: 10px;
+    height: 10px;
+    color: white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.star-1 
+{
+    position:relative;
+    left: 200px;
+    top: 200px;
+    animation: twinkle 5s infinite ease-in;
+}
+
+@keyframes twinkle {
+    25% 
+    {
+        opacity: 0.25;
+        width: 10px;
+        height: 10px;
+    }
+
+    50% 
+    {
+        opacity: 0.5;
+        width: 20px;
+        height: 20px;        
+    }
+
+    75% 
+    {
+        opacity: 0.75;
+        width: 25px;
+        height: 25px;        
+    }
+
+    100% 
+    {
+        opacity: 1;
+        width: 10px;
+        height: 10px;        
+    }
+}
+
+
+

@@ -131,7 +131,16 @@ class WorkoutExercise(models.Model):
     def __repr__(self):
         return self.workout.name + " " + self.exercise.name     
 
-# Details of a workoutexercises - seems redundant    
+# Details of a workoutexercises - seems redundant    BUT ITS NOT!
+
+ProgressionTypes = [
+    ("SS", "Approach: all sets besides last set are done at rep target"),
+    ("3's", "Approach: Pick 2 or 3 sets, with a weight you can do 7-8reps with. When you Perform 8+, add minimum Weight."), 
+    ("DDP", "Approach: 3 total sets, each progress at the own pace. (Compounds)"), 
+    ("Rep Goal", "Approach: Use the same weight for each set, all sets taken to max safe reps, Add up total reps, If reps >=  a predefined rep goal, add weight"), 
+    ("Bulldozer", "Approach: Take 3 sets into 5 mini sets"),
+    ("N", "None")
+]
 class Set(models.Model):
     
     workout_exercise = models.ForeignKey(WorkoutExercise, on_delete=models.CASCADE)
@@ -142,6 +151,7 @@ class Set(models.Model):
     weight_target = models.DecimalField("Weight Target (Kgs)",default=1.0, blank=False, validators=[MinValueValidator(0), MaxValueValidator(1000)], decimal_places=2, max_digits=8)
     weight_hit = models.DecimalField("Weight Hit (Kgs)",default=1.0, blank=False, null=False, validators=[MinValueValidator(0), MaxValueValidator(1000)], decimal_places=2, max_digits=8)
     
+    progression_model = models.CharField(blank=False, null=False, choices=ProgressionTypes, max_length=500, default="SS")
     
     def __str__(self):
         return str(self.workout_exercise.exercise) + f" x {self.reps_target} reps @{self.weight_target}kgs"

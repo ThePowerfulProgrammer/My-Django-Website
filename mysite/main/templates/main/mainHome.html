@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Ashish Ramnath {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'main/mainHome.css'  %}"> {% endblock %}
+
+{% block js %} <script src="{% static 'main/mainHome.js' %}"></script> {% endblock %}
+
+{% block body %}
+
+<!-- <div class="grid-container">
+    <div class="grid text-center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</div>
+
+<div class="grid-container">
+
+</div> -->   
+
+<div class="text-container" id="routes" data-fitness="{% url 'Potential_Unleashed:home' %}" >
+
+    <div class="text-box">
+        <h1 class=" display-1 banner text-center fira-sans-black-italic text-white">
+            <!-- I want this to be a simple introduction to my website. My app basicallys serves as a
+            warehouse for all the other apps that i have built for my own benefit. Eg: My fitness app that lives inside my main app -->
+            <span>Explore</span> my website!
+            <br>
+        </h1>
+
+        <h3 class="text-center display-5  text-white fira-sans-medium-italic banner-body">
+            A collection of minimal, optimized applications designed to support my daily life
+        </h3>
+
+        <ul class="text-center text-white fira-sans-light-italic">
+            <li>
+                Alongside a <span> <a href="#"> glimpse </a> </span> into my current engineering pursuits. 
+            </li>
+        </ul>
+                
+    </div>
+
+</div>
+
+<!-- <div class="glow-box">
+    <div class="star-1">
+    </div>
+</div> -->
+
+<div class="terminal" id="terminal">
+
+    <div id="terminalHistory" class="fira-sans-thin">
+        <!-- Written in via JS -->
+    </div>
+
+    <div class=" border-white border terminal-input" id="terminalInput">
+        <input type="text" id="commandPrompt" placeholder="" class=" fira-sans-thin" focus>
+    </div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

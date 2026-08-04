@@ -35,12 +35,15 @@ class WorkoutExerciseAdmin(admin.ModelAdmin):
 @admin.register(Set)
 class SetAdmin(admin.ModelAdmin):
     
-    list_display = ("workout_exercise", "reps_target", "reps_hit", "weight_target", "weight_hit", "rest_time")
+    list_display = ("workout_exercise", "progression_model", "reps_target", "reps_hit", "weight_target", "weight_hit", "rest_time")
     
 
     fieldsets = (
         ("Exercise Info", {
             "fields": ("workout_exercise",)
+        }),
+        ("Exercise Model", {
+            "fields": ("progression_model",)
         }),
         ("Reps", {
             "fields": ("reps_target", "reps_hit")
