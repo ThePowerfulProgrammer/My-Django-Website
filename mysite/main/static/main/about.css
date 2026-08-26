@@ -1,0 +1,69 @@
+.section 
+{
+    margin: 0 auto;
+    margin-top: 35px;
+    width: 90%;
+    margin-bottom: 35px;
+}
+
+
+
+
+.about 
+{
+    background-color: #42E2B8;
+}
+
+.contact 
+{
+    background-color: black;
+    color:white;
+}
+
+
+
+.grid 
+{
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 35px;
+    gap: 1px;
+}
+
+.grid 
+{
+    display: grid;  
+    color: white;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(3, 33%);
+}
+
+.grid .grid-item 
+{
+
+    display: flex;
+    justify-content: contain;
+
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .grid 
+    {
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    
+    .grid 
+    {
+        width: 75%;
+    }
+}

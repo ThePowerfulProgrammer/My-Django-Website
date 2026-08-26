@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Legend {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'main/about.css' %}"> {% endblock %}
+{% block js %} <script src="{% static 'main/about.js' %}"></script> {% endblock %}
+
+{% block body %}
+
+    <div class="container rounded section about p-4">
+        <p class="lead  didact-gothic-regular">
+            Hi, welcome to my little  chaotic corner
+            of the internet. This app is a little container 
+            for all the thoughts in my head.            
+        </p>
+
+        <p class="lead  didact-gothic-regular">
+            Awkwardly Social Software Engineer still
+            finding his niche. I have delved into the mysteries of game dev, the intricacies of Desktop dev, and the 
+            worderful world of Web development. 
+        </p>
+    </div>
+
+
+    <div class="container rounded section contact p-4">
+        <h3 class="display-3  boldonse-regular">
+            Contact
+        </h3>
+
+        <div class="contact-container lead didact-gothic-regular ">
+            <p class="">
+                <span>email</span>: ashishr0301@gmail.com                      
+            </p>         
+            <p class="didact-gothic-regular"><span>LinkedIn</span>:
+                https://www.linkedin.com/in/ashish-ramnath/
+            </p>
+            <p class="didact-gothic-regular text-wrap"><span>Github</span>: 
+                <a href="https://github.com/ThePowerfulProgrammer">The Hub</a>
+            </p>
+            <p class="didact-gothic-regular"><span>Telegram</span>:placeholder</p>   
+        </div>
+    </div>
+    
+    <div class="container rounded section about p-4">
+        
+        <p class="lead gravity boldonse-regular">
+            My Techy Stack 
+        </p>
+    
+    </div>
+
+    <div class="grid">
+
+        <div class="grid-item">
+            <img src="{% static 'main/js.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/css.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/html.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/django.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/gsap.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/database-storage.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/api.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/python.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+        <div class="grid-item">
+            <img src="{% static 'main/js.png' %}" alt="img here" class="placeholder-img">
+        </div>
+
+
+    </div>
+
+{% endblock %}

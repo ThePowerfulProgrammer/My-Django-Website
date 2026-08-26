@@ -24,8 +24,12 @@ class MesocycleAdmin(admin.ModelAdmin):
 @admin.register(WorkoutExercise)
 class WorkoutExerciseAdmin(admin.ModelAdmin):
     
-    list_display = ("getMesocycle","workout", "exercise", "order", "id")
+    list_display = ("getMesocycle","workout","getDate", "exercise", "order", "id")
 
+    def getDate(self, other):
+        return str(other.workout.date)
+
+    getDate.short_description = "Date"
 
     def getMesocycle(self, other):
         return other.workout.mesocycle 

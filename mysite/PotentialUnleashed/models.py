@@ -130,6 +130,12 @@ class WorkoutExercise(models.Model):
     
     def __repr__(self):
         return self.workout.name + " " + self.exercise.name     
+    
+    def getDate(self):
+        return self.workout.date
+    
+    class Meta:
+        ordering = ['workout__date']
 
 # Details of a workoutexercises - seems redundant    BUT ITS NOT!
 
@@ -177,6 +183,9 @@ class Set(models.Model):
     def getSetInfo(self):
         return str(self.workout_exercise.exercise) + f" x {self.reps_hit} reps @{self.weight_hit}kgs"
         
+        
+    class Meta:
+        ordering = ["workout_exercise__workout__date"]
         
     
     

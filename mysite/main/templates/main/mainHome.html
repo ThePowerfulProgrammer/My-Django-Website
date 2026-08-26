@@ -24,13 +24,14 @@
 
 </div> -->   
 
-<div class="text-container" id="routes" data-fitness="{% url 'Potential_Unleashed:home' %}" >
+<div class="text-container" id="routes" data-fitness="{% url 'Potential_Unleashed:home' %}" 
+                                        data-about="{% url 'main:about-view' %}">
 
     <div class="text-box">
         <h1 class=" display-1 banner text-center fira-sans-black-italic text-white">
             <!-- I want this to be a simple introduction to my website. My app basicallys serves as a
             warehouse for all the other apps that i have built for my own benefit. Eg: My fitness app that lives inside my main app -->
-            <span>Explore</span> my website!
+            <span id="explore" class="explore"></span> my website!
             <br>
         </h1>
 
@@ -40,7 +41,7 @@
 
         <ul class="text-center text-white fira-sans-light-italic">
             <li>
-                Alongside a <span> <a href="#"> glimpse </a> </span> into my current engineering pursuits. 
+                Alongside a <span> <a href="page.html"> glimpse </a> </span> into my current engineering pursuits. 
             </li>
         </ul>
                 
@@ -56,6 +57,7 @@
 <div class="terminal" id="terminal">
 
     <div id="terminalHistory" class="fira-sans-thin">
+        
         <!-- Written in via JS -->
     </div>
 
@@ -64,6 +66,8 @@
     </div>
 
 </div>
+
+
 
 
 
