@@ -20,6 +20,11 @@ class AboutView(View):
         return render(request, "main/about.html", context={})
     
     
+# Recruiters VIEW
+class RecruitersView(View):
+    
+    def get(self, request):
+        return render(request, "main/recruiters.html", context={})    
     
 # what am I up to 
 def page(request):

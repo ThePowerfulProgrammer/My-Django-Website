@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("main.urls")),
     path("PotentialUnleashed/", include('PotentialUnleashed.urls')),
+    path("presentsforpeach/", include("presentsforpeach.urls")),
 ]

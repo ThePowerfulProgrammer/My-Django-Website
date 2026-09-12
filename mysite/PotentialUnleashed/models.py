@@ -47,6 +47,7 @@ class Mesocycle(models.Model):
     notes = models.TextField(blank=True)
     startDate = models.DateField(null=False, blank=False)
     endDate = models.DateField(null=True, blank=True)
+    is_current = models.BooleanField(default=False)
     
     def __str__(self):
         return self.name 

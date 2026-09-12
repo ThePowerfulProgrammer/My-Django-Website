@@ -10,4 +10,7 @@ urlpatterns = [
     # paths for about, contact, and recruiters
     path("about", views.AboutView.as_view(), name="about-view"),    
     
+    path("recruiters", views.RecruitersView.as_view(), name="recruiters-view")
+    
+    
 ]

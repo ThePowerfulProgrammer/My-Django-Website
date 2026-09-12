@@ -1,0 +1,55 @@
+{% extends 'main/mainHome.html' %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'main/recruiters.css' %}"> {% endblock%}
+{% block js %} <script src="{% static 'main/recruiters.js' %}"></script> {% endblock %}
+
+{% block body %}
+
+    <!-- ME + work history + interests + education + nice layout + portfloio      -->
+
+    <div class="grid">
+        <div class="grid-item card didact-gothic-regular" id="box1">
+            <!-- Me -->
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Education: Bachelor's of Computing (UNISA)
+                </li>
+                <li class="list-group-item">
+                    Personality: Unwavering
+                </li>
+                <li class="list-group-item">
+                    Status Code: 200
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item card" id="box2">
+            <!-- Work history -->
+            <a href="{% static 'main/Ashish_R_CV.pdf' %}" download="Hired.pdf">
+                <h1 class="display-1 didact-gothic-regular">Work History</h1>
+            </a>
+        </div>
+        <div class="grid-item card" id="box3">
+            <a href="https://github.com/ThePowerfulProgrammer/leetCodeProblems" target="_blank">
+                <h1 class="display-1 didact-gothic-regular">
+                    Stalk my Github 👀
+                </h1>
+            </a>            
+
+        </div>
+        <div class="grid-item card" id="box4">
+          <p class="didact-gothic-regular">
+            But Who am I? I hate this question, and recruiters seem to love it. 
+            I have learnt how to answer 'I am cool, calm and collected. A man who has worn many hats in a short span of time, Teacher, Technial Support, Tutor, Quality Assurance.
+            I like to think of myself as an Adaptable engineer. The ability to adapt and overcome any situation and I always had examples to draw on'
+          </p>
+          <p>
+            All of this is true but Who am I? I am someone with unwavering spirit. I lost myself in grade 5 and it took me years to fall back in love with myself, thousands of lines of code etched into IDE's, I have brought websites to life,
+            solved leetcode questions in C++ purely for the love of the game, sometimes I find myself to lazy to fill the ink in my printer but I have troubleshot hundreds of client requests from around the world. Who am I? I am an optimistic engineer            
+          </p>          
+        </div>
+    </div>
+
+
+
+{% endblock %}

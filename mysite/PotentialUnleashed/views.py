@@ -21,9 +21,22 @@ def mesocycles(request):
     current_mesocycle = Mesocycle.objects.last()
     print("CURRENT MESOCYCLE: ", current_mesocycle)
     print(mesocycles)
+    
+    # I want all the workouts associated with this mesocycle
+    workoutsCompleted = len(current_mesocycle.workouts.all())
+    
+    # I want the start date of my mesocycle
+    mesocycleStartDate = current_mesocycle.startDate
+    # I want the end date of my mesocycle
+    mesocycleEndDate = current_mesocycle.endDate
+
+
     return render(request, "PotentialUnleashed/mesocycles.html", 
                   context={"mesocycles": mesocycles, 
-                           "current_mesocycle":current_mesocycle})
+                           "current_mesocycle":current_mesocycle, 
+                           "workoutsCompleted": workoutsCompleted, 
+                           "mesocycleStartDate": mesocycleStartDate, 
+                           "mesocycleEndDate": mesocycleEndDate })
     
 # Show all workouts under a mesocycle    
 # 3

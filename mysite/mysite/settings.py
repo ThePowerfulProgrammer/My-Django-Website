@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # My apps
-    'PotentialUnleashed',
-    'main',
+    'main', # Root app
+    'PotentialUnleashed', # Workout app
+    'presentsforpeach', # Lesleigh app
 ]
 
 MIDDLEWARE = [

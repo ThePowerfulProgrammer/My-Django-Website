@@ -14,3 +14,39 @@
 {
     color: #2CDA9D;
 }
+
+.card-container 
+{
+    margin-top: 2rem;
+}
+
+.card-container .card 
+{
+    background-color: #b09e94;
+}
+
+.card-container .full-card 
+{
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.card-container .half-card-container 
+{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1px;
+}
+
+.card-container .half-card-container .half-card 
+{
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    width: 100%;
+}
+
+.card-container .card:hover 
+{
+    color:#2CDA9D;
+}

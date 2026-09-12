@@ -1,0 +1,43 @@
+/* I am going to take a mobile first approach to my styling */
+
+
+.form-container 
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container 
+{
+    background-color: #000000;
+    padding: 2rem 1rem;
+    width: 95%;
+    border-radius: 12px;
+    height: 80vh;
+    border: 2px solid black;
+}
+
+.form-control 
+{
+    margin-top: 1.5rem;
+    background-color: #2cda9d;
+    padding: 1rem;
+}
+
+.btn
+{
+    margin-top: 1rem;
+    background-color: #3f2cda;
+    border-color: #3f2cda;
+    padding: 1rem 1.5rem;
+}
+
+.btn a 
+{
+    color: white;
+    text-decoration: none;
+}

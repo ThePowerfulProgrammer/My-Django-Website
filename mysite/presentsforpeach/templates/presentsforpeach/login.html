@@ -1,0 +1,52 @@
+{% extends 'presentsforpeach/base.html' %}
+{% load static %}
+
+{% block title %} Login {% endblock %}
+
+{% include 'main/fonts.html' %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'presentsforpeach/login.css' %}"> {% endblock %}
+
+{% block body %}
+
+
+<div class="form-container">
+    <div class="container border ">
+        <form action="{% url 'presentsforpeach:login' %}" method="post" autocomplete="off" >
+            {% csrf_token %}
+            <div class="form-group">
+                <!-- username -->
+                <!-- <label for="username">Username</label> -->
+                <input type="text" class="form-control " name="username" id="username" aria-describedby="usernameHelp" placeholder="Enter Username" class="fira-sans-black-italic" autocomplete="">
+            </div>
+
+            <div class="form-group">
+                <!-- password -->
+                <!-- <label for="password">Password</label> -->
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="new-password">            
+            </div>
+
+        <div class="form-group">
+            <!-- <label for="email">Email address</label> -->
+            <input type="email" class="form-control " id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+            
+        <button class="btn btn-primary" type="submit">
+            Login
+        </button>
+
+        <button class="btn btn-primary" type="button">  
+            <a href="{% url 'main:mainHome' %}">Home</a>
+        </button>
+        
+        </form>
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

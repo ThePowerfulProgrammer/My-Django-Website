@@ -1,0 +1,76 @@
+.grid 
+{
+    height: 90vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%); /*How many columns do I want and how wide will each be :)*/ 
+    grid-template-rows: repeat(5, 20%),; /*How many rows do I want and how wide will each be :)*/
+    margin: 0 auto;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.grid-item 
+{
+    background-color: salmon;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#box1 
+{
+    grid-column-start: 1;
+    grid-column-end:3;
+    background-color: #2cda9d;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#box1 .list-group-item
+{
+    background-color: #2cda9d;
+    border: 0px;
+    color: white;
+}
+
+#box2 
+{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #3f2cda;
+    justify-content: center;
+    align-items: center;
+}
+
+#box2 h1 
+{
+    color: white;
+}
+
+#box3 
+{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;   
+    background-color: #2cda9d;
+    justify-content: center;
+    align-items: center;
+}
+
+#box4 
+{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #3f2cda;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

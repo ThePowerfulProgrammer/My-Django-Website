@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're working over here</title>
+
+    <link rel="stylesheet" href="{% static 'presentsforpeach/underconstruction.css' %}">
+</head>
+<body>
+
+        <a href="{% url 'main:mainHome' %}">
+            <img src="{% static 'presentsforpeach/uc.png'%}" alt="uc" class="image">
+        </a>
+</body>
+</html>

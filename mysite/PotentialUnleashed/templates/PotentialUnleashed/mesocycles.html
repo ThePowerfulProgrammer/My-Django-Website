@@ -30,7 +30,27 @@
             {% endfor %}
 
         </ol>
-    
+        
+        <div class="card-container container">
+            
+            <div class="card boldonse-regular full-card text-center">
+                Workouts Completed: {{ workoutsCompleted }}
+            </div>
+
+
+            <div class="half-card-container">
+                <div class="card border  border-black boldonse-regular half-card text-center">
+                    Start Date: {{ mesocycleStartDate }}
+                </div>
+
+                <div class="card border  border-black boldonse-regular half-card text-center">
+                    End Date: {{ mesocycleEndDate }}
+                </div>
+            </div>
+        
+        </div>
+
+
     {% else %}
         <h1 class="text-center fs-1">Please return to the homepage</h1>
         <a href="#" class="btn btn-lg btn-primary text-center">Home</a>
