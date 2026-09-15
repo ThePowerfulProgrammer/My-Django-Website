@@ -37,7 +37,6 @@
                 Workouts Completed: {{ workoutsCompleted }}
             </div>
 
-
             <div class="half-card-container">
                 <div class="card border  border-black boldonse-regular half-card text-center">
                     Start Date: {{ mesocycleStartDate }}
@@ -50,6 +49,16 @@
         
         </div>
 
+
+        <div class="container">
+            <!-- Ash this will consume a lot of space  -->
+            <div class="notes-container ">
+                <p class="boldonse-regular">
+                    {{ mesocycleNotes }}
+                </p>                
+            </div>
+
+        </div>
 
     {% else %}
         <h1 class="text-center fs-1">Please return to the homepage</h1>

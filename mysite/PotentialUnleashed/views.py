@@ -31,12 +31,16 @@ def mesocycles(request):
     mesocycleEndDate = current_mesocycle.endDate
 
 
+    # I want the mesocycle notes
+    mesocycleNotes = current_mesocycle.notes
+
     return render(request, "PotentialUnleashed/mesocycles.html", 
                   context={"mesocycles": mesocycles, 
                            "current_mesocycle":current_mesocycle, 
                            "workoutsCompleted": workoutsCompleted, 
                            "mesocycleStartDate": mesocycleStartDate, 
-                           "mesocycleEndDate": mesocycleEndDate })
+                           "mesocycleEndDate": mesocycleEndDate,
+                            "mesocycleNotes": mesocycleNotes})
     
 # Show all workouts under a mesocycle    
 # 3
@@ -73,6 +77,7 @@ def workoutDetails(request, mesocycle_id,workout_id):
         # I need the indiviual information relevant to an exercise Rope Pulldown x 1 reps @1.00kgs
         if request.user.is_superuser:
                 
+            
             exercise_fields = ["#", "Exercise", "Rep target", "weight target (Kilos)", "", "Reps Hit", "Weight Hit (Kilos)", "Track" ]
                                 
             return render(request, "PotentialUnleashed/workoutDetail.html", 

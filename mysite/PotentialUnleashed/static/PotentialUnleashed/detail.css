@@ -95,6 +95,7 @@
     color: #2CDA9D;
 }
 
+
 @media (max-width: 630px) {
 
     .table-heading 
@@ -115,7 +116,7 @@
     .title 
     {
         background-color: transparent;
-        color: black;
+        color: white;
     }        
 
     .workout-container 
